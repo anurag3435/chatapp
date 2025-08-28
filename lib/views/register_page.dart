@@ -3,14 +3,14 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'dart:developer' as devtools;
 
-class LoginPage extends StatefulWidget {
-  const LoginPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailcontroller = TextEditingController();
   final TextEditingController pwcontroller = TextEditingController();
 
@@ -25,16 +25,16 @@ class _LoginPageState extends State<LoginPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Login"),
+        title: const Text("Register"),
         backgroundColor: Colors.purple[50],
       ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.only(top: 150),
-            child: Icon(Icons.message, size: 150),
+            child: Icon(Icons.app_registration, size: 150),
           ),
-          const Text("welcome back!", style: TextStyle(fontSize: 23)),
+          const Text("register now!", style: TextStyle(fontSize: 23)),
           Padding(
             padding: const EdgeInsets.only(
               left: 25,
@@ -64,7 +64,7 @@ class _LoginPageState extends State<LoginPage> {
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(8),
                 ),
-                hintText: "enter your password",
+                hintText: "create your password",
               ),
             ),
           ),
@@ -78,7 +78,7 @@ class _LoginPageState extends State<LoginPage> {
                 final email = emailcontroller.text.trim();
                 final password = pwcontroller.text.trim();
                 final userCredential = await FirebaseAuth.instance
-                    .signInWithEmailAndPassword(
+                    .createUserWithEmailAndPassword(
                       email: email,
                       password: password,
                     );
@@ -94,7 +94,7 @@ class _LoginPageState extends State<LoginPage> {
           ),
           TextButton(
             onPressed: () {
-              Navigator.pushNamed(context, registerRoute);
+              Navigator.pushNamed(context, loginRoute);
             },
             child: const Text("already registered?Login here"),
           ),
