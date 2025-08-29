@@ -1,5 +1,7 @@
 import 'package:chat_app/firebase_options.dart';
 import 'package:chat_app/routes/routes.dart';
+import 'package:chat_app/views/chat_view.dart';
+import 'package:chat_app/views/email_verification.dart';
 import 'package:chat_app/views/login_page.dart';
 // import 'package:chat_app/views/login_page.dart';
 import 'package:chat_app/views/register_page.dart';
@@ -29,6 +31,8 @@ void main() async {
       routes: {
         loginRoute: (context) => LoginPage(),
         registerRoute: (context) => RegisterPage(),
+        emailVerifyRoute: (context) => EmailVerification(),
+        chatRoute: (context) => ChatView(),
       },
     ),
   );

@@ -8,7 +8,7 @@ class Homepage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("chat system"),
-        actions: [],
+        actions: [], // actions havent done yet!!
         backgroundColor: Colors.purple[50],
       ),
       body: Center(child: const Text("no chats yet!")),

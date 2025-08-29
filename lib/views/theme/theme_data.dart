@@ -8,3 +8,8 @@ final lightTheme = ThemeData(
     foregroundColor: Colors.white,
   ),
 );
+final darkTheme = ThemeData(
+  brightness: Brightness.dark,
+  scaffoldBackgroundColor: Colors.black,
+  appBarTheme: AppBarTheme(backgroundColor: Colors.deepPurple),
+);
