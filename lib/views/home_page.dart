@@ -9,7 +9,6 @@ class Homepage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("chat system"),
         actions: [], // actions havent done yet!!
-        backgroundColor: Colors.purple[50],
       ),
       body: Center(child: const Text("no chats yet!")),
       floatingActionButton: FloatingActionButton(
